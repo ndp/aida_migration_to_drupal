@@ -1,0 +1,55 @@
+<h1>Listing pages</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for page in @pages %>
+  <tr>
+    <td><%= page.name %></td>
+    <td><%= page.title_en %></td>
+    <td><%= page.title_es %></td>
+    <td><%= link_to 'Show', page %></td>
+    <td><%= link_to 'Edit', edit_page_path(page) %></td>
+    <td><%= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New page', new_page_path %>
+
+
+
+
+#  name   	varchar(40)  	latin1_swedish_ci  	   	S’   	   	   	  Cambiar   	  Eliminar   	  Primaria   	  êndice   	  ònico   	  Texto completo
+#	 title_en  	varchar(100) 	latin1_swedish_ci 	  	S’  	  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 title_es  	varchar(100) 	latin1_swedish_ci 	  	S’  	  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 active  	enum('Y', 'N') 	latin1_swedish_ci 	  	S’  	N  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id1  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id2  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id3  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id4  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id5  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id6  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id7  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id8  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id9  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id10  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 story_id11  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 org_id  	varchar(32) 	latin1_swedish_ci 	  	S’  	aida  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 parent_page_id  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 content_template  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id1  	int(11) 	  	  	S’  	NULL  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id2  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id3  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id4  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id5  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id6  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id7  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id8  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id9  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id10  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 image_id11  	int(11) 	  	  	S’  	0  	  	Cambiar 	Eliminar 	Primaria 	êndice 	ònico 	Texto completo
+#	 last_changed
