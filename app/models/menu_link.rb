@@ -1,0 +1,3 @@
+class MenuLink < DrupalBase
+
+end

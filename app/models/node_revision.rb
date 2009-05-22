@@ -1,0 +1,3 @@
+class NodeRevision < DrupalBase
+
+end
