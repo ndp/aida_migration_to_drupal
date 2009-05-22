@@ -136,15 +136,11 @@ INSERT INTO `menu_links` (`menu_name`, `mlid`, `plid`, `link_path`, `router_path
 ('navigation', 160, 15, 'admin/help/i18nmenu', 'admin/help/i18nmenu', 'i18nmenu', 'a:0:{}', 'system', -1, 0, 0, 0, 0, 3, 0, 2, 15, 160, 0, 0, 0, 0, 0, 0, 0),
 ('navigation', 158, 15, 'admin/help/i18nstrings', 'admin/help/i18nstrings', 'i18nstrings', 'a:0:{}', 'system', -1, 0, 0, 0, 0, 3, 0, 2, 15, 158, 0, 0, 0, 0, 0, 0, 0),
 ('navigation', 159, 15, 'admin/help/i18nblocks', 'admin/help/i18nblocks', 'i18nblocks', 'a:0:{}', 'system', -1, 0, 0, 0, 0, 3, 0, 2, 15, 159, 0, 0, 0, 0, 0, 0, 0),
-('primary-links', 153, 0, 'node/1001', 'node/%', 'Inicio', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:6:"Inicio";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 153, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('primary-links', 154, 0, 'node/1', 'node/%', 'Home', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:4:"Home";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 154, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('primary-links', 155, 0, 'node/1078', 'node/%', 'Proyectos Pasados', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:17:"Proyectos Pasados";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 155, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('primary-links', 156, 0, 'node/78', 'node/%', 'Past Projects', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:13:"Past Projects";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 ('navigation', 157, 0, 'i18nstrings/save', 'i18nstrings/save', 'Save string', 'a:0:{}', 'system', -1, 0, 0, 0, 0, 1, 0, 157, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (1,     1,     'page','en',    'Home',1,   1,      NOW(),   NOW(), 0,0,0,0,1,0),
-            (1001,1001,'page','es',    'Inicio',1,   1,      NOW(),   NOW(), 0,0,0,0,1,0);
+            (1,     1,     'book','en',    'Home',1,   1,      NOW(),   NOW(), 0,0,0,0,1,0),
+            (1001,1001,'book','es',    'Inicio',1,   1,      NOW(),   NOW(), 0,0,0,0,1,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10000,1,1),(10001,1001,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -154,8 +150,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/1','home','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1001','home','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (2,     2,     'page','en',    'About AIDA',1,   1,      NOW(),   NOW(), 0,0,0,0,2,0),
-            (1002,1002,'page','es',    'Acerca de AIDA',1,   1,      NOW(),   NOW(), 0,0,0,0,2,0);
+            (2,     2,     'book','en',    'About AIDA',1,   1,      NOW(),   NOW(), 0,0,0,0,2,0),
+            (1002,1002,'book','es',    'Acerca de AIDA',1,   1,      NOW(),   NOW(), 0,0,0,0,2,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10002,2,1),(10003,1002,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -266,8 +262,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/5','principles','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1005','principles','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (13,     13,     'page','en',    'La Oroya',1,   1,      NOW(),   NOW(), 0,0,0,0,13,0),
-            (1013,1013,'page','es',    'La Oroya',1,   1,      NOW(),   NOW(), 0,0,0,0,13,0);
+            (13,     13,     'book','en',    'La Oroya',1,   1,      NOW(),   NOW(), 0,0,0,0,13,0),
+            (1013,1013,'book','es',    'La Oroya',1,   1,      NOW(),   NOW(), 0,0,0,0,13,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10010,13,1),(10011,1013,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -277,8 +273,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/13','laoroya','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1013','laoroya','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (8,     8,     'page','en',    'Helping',1,   1,      NOW(),   NOW(), 0,0,0,0,8,0),
-            (1008,1008,'page','es',    'Colaborando',1,   1,      NOW(),   NOW(), 0,0,0,0,8,0);
+            (8,     8,     'book','en',    'Helping',1,   1,      NOW(),   NOW(), 0,0,0,0,8,0),
+            (1008,1008,'book','es',    'Colaborando',1,   1,      NOW(),   NOW(), 0,0,0,0,8,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10012,8,1),(10013,1008,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -299,8 +295,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/9','contact','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1009','contact','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (10,     10,     'page','en',    'Donate to AIDA',1,   1,      NOW(),   NOW(), 0,0,0,0,10,0),
-            (1010,1010,'page','es',    'Apoye a AIDA',1,   1,      NOW(),   NOW(), 0,0,0,0,10,0);
+            (10,     10,     'book','en',    'Donate to AIDA',1,   1,      NOW(),   NOW(), 0,0,0,0,10,0),
+            (1010,1010,'book','es',    'Apoye a AIDA',1,   1,      NOW(),   NOW(), 0,0,0,0,10,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10016,10,1),(10017,1010,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -310,8 +306,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/10','donate','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1010','donate','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (11,     11,     'page','en',    'Participating Organizations',1,   1,      NOW(),   NOW(), 0,0,0,0,11,0),
-            (1011,1011,'page','es',    'Organizaciones Participantes',1,   1,      NOW(),   NOW(), 0,0,0,0,11,0);
+            (11,     11,     'book','en',    'Participating Organizations',1,   1,      NOW(),   NOW(), 0,0,0,0,11,0),
+            (1011,1011,'book','es',    'Organizaciones Participantes',1,   1,      NOW(),   NOW(), 0,0,0,0,11,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10018,11,1),(10019,1011,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -321,8 +317,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/11','partorgs','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1011','partorgs','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (12,     12,     'page','en',    'Projects',1,   1,      NOW(),   NOW(), 0,0,0,0,12,0),
-            (1012,1012,'page','es',    'Proyectos',1,   1,      NOW(),   NOW(), 0,0,0,0,12,0);
+            (12,     12,     'book','en',    'Projects',1,   1,      NOW(),   NOW(), 0,0,0,0,12,0),
+            (1012,1012,'book','es',    'Proyectos',1,   1,      NOW(),   NOW(), 0,0,0,0,12,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10020,12,1),(10021,1012,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -343,8 +339,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/14','uwa','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1014','uwa','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (17,     17,     'page','en',    'Marine Turtles',1,   1,      NOW(),   NOW(), 0,0,0,0,17,0),
-            (1017,1017,'page','es',    'Tortugas Marinas',1,   1,      NOW(),   NOW(), 0,0,0,0,17,0);
+            (17,     17,     'book','en',    'Marine Turtles',1,   1,      NOW(),   NOW(), 0,0,0,0,17,0),
+            (1017,1017,'book','es',    'Tortugas Marinas',1,   1,      NOW(),   NOW(), 0,0,0,0,17,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10024,17,1),(10025,1017,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -354,8 +350,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/17','turtles','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1017','turtles','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (18,     18,     'page','en',    'Oil-free Costa Rica',1,   1,      NOW(),   NOW(), 0,0,0,0,18,0),
-            (1018,1018,'page','es',    'Costa Rica Libre de Petróleo',1,   1,      NOW(),   NOW(), 0,0,0,0,18,0);
+            (18,     18,     'book','en',    'Oil-free Costa Rica',1,   1,      NOW(),   NOW(), 0,0,0,0,18,0),
+            (1018,1018,'book','es',    'Costa Rica Libre de Petróleo',1,   1,      NOW(),   NOW(), 0,0,0,0,18,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10026,18,1),(10027,1018,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -365,8 +361,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/18','talamanca','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1018','talamanca','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (19,     19,     'page','en',    'Peruvian Logging',1,   1,      NOW(),   NOW(), 0,0,0,0,19,0),
-            (1019,1019,'page','es',    'Caoba Tropical',1,   1,      NOW(),   NOW(), 0,0,0,0,19,0);
+            (19,     19,     'book','en',    'Peruvian Logging',1,   1,      NOW(),   NOW(), 0,0,0,0,19,0),
+            (1019,1019,'book','es',    'Caoba Tropical',1,   1,      NOW(),   NOW(), 0,0,0,0,19,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10028,19,1),(10029,1019,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -376,8 +372,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/19','logging','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1019','logging','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (21,     21,     'page','en',    'Miramar',1,   1,      NOW(),   NOW(), 0,0,0,0,21,0),
-            (1021,1021,'page','es',    'Miramar',1,   1,      NOW(),   NOW(), 0,0,0,0,21,0);
+            (21,     21,     'book','en',    'Miramar',1,   1,      NOW(),   NOW(), 0,0,0,0,21,0),
+            (1021,1021,'book','es',    'Miramar',1,   1,      NOW(),   NOW(), 0,0,0,0,21,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10030,21,1),(10031,1021,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -475,8 +471,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/29','spda','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1029','spda','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (31,     31,     'page','en',    'Credits',1,   1,      NOW(),   NOW(), 0,0,0,0,31,0),
-            (1031,1031,'page','es',    'Créditos',1,   1,      NOW(),   NOW(), 0,0,0,0,31,0);
+            (31,     31,     'book','en',    'Credits',1,   1,      NOW(),   NOW(), 0,0,0,0,31,0),
+            (1031,1031,'book','es',    'Créditos',1,   1,      NOW(),   NOW(), 0,0,0,0,31,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10048,31,1),(10049,1031,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -686,8 +682,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/48','laoroya.city_measu
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1048','laoroya.city_measures','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (58,     58,     'page','en',    'Photo Gallery',1,   1,      NOW(),   NOW(), 0,0,0,0,58,0),
-            (1058,1058,'page','es',    'Fotos',1,   1,      NOW(),   NOW(), 0,0,0,0,58,0);
+            (58,     58,     'book','en',    'Photo Gallery',1,   1,      NOW(),   NOW(), 0,0,0,0,58,0),
+            (1058,1058,'book','es',    'Fotos',1,   1,      NOW(),   NOW(), 0,0,0,0,58,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10074,58,1),(10075,1058,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -873,8 +869,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/66','turtles.science','
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1066','turtles.science','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (67,     67,     'page','en',    'Threats to Turtles',1,   1,      NOW(),   NOW(), 0,0,0,0,67,0),
-            (1067,1067,'page','es',    'Amenazas a las tortugas',1,   1,      NOW(),   NOW(), 0,0,0,0,67,0);
+            (67,     67,     'book','en',    'Threats to Turtles',1,   1,      NOW(),   NOW(), 0,0,0,0,67,0),
+            (1067,1067,'book','es',    'Amenazas a las tortugas',1,   1,      NOW(),   NOW(), 0,0,0,0,67,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10108,67,1),(10109,1067,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -895,8 +891,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/68','turtles.xcacel','e
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1068','turtles.xcacel','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (69,     69,     'page','en',    'Bycatch',1,   1,      NOW(),   NOW(), 0,0,0,0,69,0),
-            (1069,1069,'page','es',    'Pesca accidental',1,   1,      NOW(),   NOW(), 0,0,0,0,69,0);
+            (69,     69,     'book','en',    'Bycatch',1,   1,      NOW(),   NOW(), 0,0,0,0,69,0),
+            (1069,1069,'book','es',    'Pesca accidental',1,   1,      NOW(),   NOW(), 0,0,0,0,69,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10112,69,1),(10113,1069,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1005,8 +1001,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/78','past_projects','en
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1078','past_projects','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (79,     79,     'page','en',    'Plan Colombia',1,   1,      NOW(),   NOW(), 0,0,0,0,79,0),
-            (1079,1079,'page','es',    'Plan Colombia',1,   1,      NOW(),   NOW(), 0,0,0,0,79,0);
+            (79,     79,     'book','en',    'Plan Colombia',1,   1,      NOW(),   NOW(), 0,0,0,0,79,0),
+            (1079,1079,'book','es',    'Plan Colombia',1,   1,      NOW(),   NOW(), 0,0,0,0,79,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10132,79,1),(10133,1079,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1104,8 +1100,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/87','plancolombia_legal
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1087','plancolombia_legalhistory','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (88,     88,     'page','en',    'Reference Documents',1,   1,      NOW(),   NOW(), 0,0,0,0,88,0),
-            (1088,1088,'page','es',    'Documentos de Consulta',1,   1,      NOW(),   NOW(), 0,0,0,0,88,0);
+            (88,     88,     'book','en',    'Reference Documents',1,   1,      NOW(),   NOW(), 0,0,0,0,88,0),
+            (1088,1088,'book','es',    'Documentos de Consulta',1,   1,      NOW(),   NOW(), 0,0,0,0,88,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10150,88,1),(10151,1088,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1192,8 +1188,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/97','internal_accountin
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1097','internal_accounting','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (98,     98,     'page','en',    'Home',1,   1,      NOW(),   NOW(), 0,0,0,0,98,0),
-            (1098,1098,'page','es',    '',1,   1,      NOW(),   NOW(), 0,0,0,0,98,0);
+            (98,     98,     'book','en',    'Home',1,   1,      NOW(),   NOW(), 0,0,0,0,98,0),
+            (1098,1098,'book','es',    '',1,   1,      NOW(),   NOW(), 0,0,0,0,98,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10166,98,1),(10167,1098,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1302,8 +1298,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/108','press_releasefeb2
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1108','press_releasefeb2004','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (109,     109,     'page','en',    'PAMA 2004 - 2011',1,   1,      NOW(),   NOW(), 0,0,0,0,109,0),
-            (1109,1109,'page','es',    'PAMA 2004 - 2011',1,   1,      NOW(),   NOW(), 0,0,0,0,109,0);
+            (109,     109,     'book','en',    'PAMA 2004 - 2011',1,   1,      NOW(),   NOW(), 0,0,0,0,109,0),
+            (1109,1109,'book','es',    'PAMA 2004 - 2011',1,   1,      NOW(),   NOW(), 0,0,0,0,109,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10186,109,1),(10187,1109,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1346,8 +1342,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/112','aidacritique','en
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1112','aidacritique','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (113,     113,     'page','en',    'Ravaging the oceans',1,   1,      NOW(),   NOW(), 0,0,0,0,113,0),
-            (1113,1113,'page','es',    'Arrasando con los océanos',1,   1,      NOW(),   NOW(), 0,0,0,0,113,0);
+            (113,     113,     'book','en',    'Ravaging the oceans',1,   1,      NOW(),   NOW(), 0,0,0,0,113,0),
+            (1113,1113,'book','es',    'Arrasando con los océanos',1,   1,      NOW(),   NOW(), 0,0,0,0,113,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10194,113,1),(10195,1113,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1412,8 +1408,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/118','fisheries_chilean
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1118','fisheries_chileanseabass','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (119,     119,     'page','en',    'Economic and Ecological Effects',1,   1,      NOW(),   NOW(), 0,0,0,0,119,0),
-            (1119,1119,'page','es',    'Efectos Económicos y Ecológicos',1,   1,      NOW(),   NOW(), 0,0,0,0,119,0);
+            (119,     119,     'book','en',    'Economic and Ecological Effects',1,   1,      NOW(),   NOW(), 0,0,0,0,119,0),
+            (1119,1119,'book','es',    'Efectos Económicos y Ecológicos',1,   1,      NOW(),   NOW(), 0,0,0,0,119,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10206,119,1),(10207,1119,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1445,8 +1441,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/121','fisheries_tragedy
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1121','fisheries_tragedyofthecommons','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (122,     122,     'page','en',    'Modern Fishing Techniques',1,   1,      NOW(),   NOW(), 0,0,0,0,122,0),
-            (1122,1122,'page','es',    'Técnicas Modernas de Pesca',1,   1,      NOW(),   NOW(), 0,0,0,0,122,0);
+            (122,     122,     'book','en',    'Modern Fishing Techniques',1,   1,      NOW(),   NOW(), 0,0,0,0,122,0),
+            (1122,1122,'book','es',    'Técnicas Modernas de Pesca',1,   1,      NOW(),   NOW(), 0,0,0,0,122,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10212,122,1),(10213,1122,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1522,8 +1518,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/127','annualreport','en
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1127','annualreport','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (128,     128,     'page','en',    'Human Rights and the Environment',1,   1,      NOW(),   NOW(), 0,0,0,0,128,0),
-            (1128,1128,'page','es',    'Derechos Humanos y el Medio Ambiente',1,   1,      NOW(),   NOW(), 0,0,0,0,128,0);
+            (128,     128,     'book','en',    'Human Rights and the Environment',1,   1,      NOW(),   NOW(), 0,0,0,0,128,0),
+            (1128,1128,'book','es',    'Derechos Humanos y el Medio Ambiente',1,   1,      NOW(),   NOW(), 0,0,0,0,128,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10226,128,1),(10227,1128,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1555,8 +1551,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/130','laoroya.april05pr
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1130','laoroya.april05pr','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (131,     131,     'page','en',    'Reference Documents',1,   1,      NOW(),   NOW(), 0,0,0,0,131,0),
-            (1131,1131,'page','es',    'Documentos Adicionales',1,   1,      NOW(),   NOW(), 0,0,0,0,131,0);
+            (131,     131,     'book','en',    'Reference Documents',1,   1,      NOW(),   NOW(), 0,0,0,0,131,0),
+            (1131,1131,'book','es',    'Documentos Adicionales',1,   1,      NOW(),   NOW(), 0,0,0,0,131,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10232,131,1),(10233,1131,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1654,8 +1650,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/138','help_products','e
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1138','help_products','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (139,     139,     'page','en',    'Internship and Job Opportunities',1,   1,      NOW(),   NOW(), 0,0,0,0,139,0),
-            (1139,1139,'page','es',    '',1,   1,      NOW(),   NOW(), 0,0,0,0,139,0);
+            (139,     139,     'book','en',    'Internship and Job Opportunities',1,   1,      NOW(),   NOW(), 0,0,0,0,139,0),
+            (1139,1139,'book','es',    '',1,   1,      NOW(),   NOW(), 0,0,0,0,139,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10250,139,1),(10251,1139,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1698,8 +1694,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/142','laoroya.enviroqua
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1142','laoroya.enviroquality','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (143,     143,     'page','en',    'Obligations for Environmental Remediation',1,   1,      NOW(),   NOW(), 0,0,0,0,143,0),
-            (1143,1143,'page','es',    'Obligaciones para Remediación Ambiental',1,   1,      NOW(),   NOW(), 0,0,0,0,143,0);
+            (143,     143,     'book','en',    'Obligations for Environmental Remediation',1,   1,      NOW(),   NOW(), 0,0,0,0,143,0),
+            (1143,1143,'book','es',    'Obligaciones para Remediación Ambiental',1,   1,      NOW(),   NOW(), 0,0,0,0,143,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10258,143,1),(10259,1143,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1896,8 +1892,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/165','laoroya.drpcompam
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1165','laoroya.drpcompama06','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (168,     168,     'page','en',    'AIDA News',1,   1,      NOW(),   NOW(), 0,0,0,0,168,0),
-            (1168,1168,'page','es',    'Noticias',1,   1,      NOW(),   NOW(), 0,0,0,0,168,0);
+            (168,     168,     'book','en',    'AIDA News',1,   1,      NOW(),   NOW(), 0,0,0,0,168,0),
+            (1168,1168,'book','es',    'Noticias',1,   1,      NOW(),   NOW(), 0,0,0,0,168,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10294,168,1),(10295,1168,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1951,8 +1947,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/170','marine_pr','en');
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1170','marine_pr','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (171,     171,     'page','en',    'Toward Sustainable Aquaculture',1,   1,      NOW(),   NOW(), 0,0,0,0,171,0),
-            (1171,1171,'page','es',    'Por una Acuicultura Sostenible',1,   1,      NOW(),   NOW(), 0,0,0,0,171,0);
+            (171,     171,     'book','en',    'Toward Sustainable Aquaculture',1,   1,      NOW(),   NOW(), 0,0,0,0,171,0),
+            (1171,1171,'book','es',    'Por una Acuicultura Sostenible',1,   1,      NOW(),   NOW(), 0,0,0,0,171,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10304,171,1),(10305,1171,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1984,8 +1980,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/173','laoroya.usefullin
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1173','laoroya.usefullinks','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (174,     174,     'page','en',    'Hydroelectric Dam, La Parota',1,   1,      NOW(),   NOW(), 0,0,0,0,174,0),
-            (1174,1174,'page','es',    'Presa Hidroeléctrica La Parota',1,   1,      NOW(),   NOW(), 0,0,0,0,174,0);
+            (174,     174,     'book','en',    'Hydroelectric Dam, La Parota',1,   1,      NOW(),   NOW(), 0,0,0,0,174,0),
+            (1174,1174,'book','es',    'Presa Hidroeléctrica La Parota',1,   1,      NOW(),   NOW(), 0,0,0,0,174,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10310,174,1),(10311,1174,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -1995,8 +1991,8 @@ INSERT INTO url_alias (src, dst, language) VALUES ('node/174','laparota_home','e
 INSERT INTO url_alias (src, dst, language) VALUES ('node/1174','laparota_home','es');
 INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
-            (175,     175,     'page','en',    'Environmental Impacts and Human Rights Violations Resulting from Large Dams',1,   1,      NOW(),   NOW(), 0,0,0,0,175,0),
-            (1175,1175,'page','es',    'IMPACTOS AMBIENTALES Y VIOLACIONES A DERECHOS HUMANOS',1,   1,      NOW(),   NOW(), 0,0,0,0,175,0);
+            (175,     175,     'book','en',    'Environmental Impacts and Human Rights Violations Resulting from Large Dams',1,   1,      NOW(),   NOW(), 0,0,0,0,175,0),
+            (1175,1175,'book','es',    'IMPACTOS AMBIENTALES Y VIOLACIONES A DERECHOS HUMANOS',1,   1,      NOW(),   NOW(), 0,0,0,0,175,0);
 INSERT INTO book (mlid, nid, bid) VALUES (10312,175,1),(10313,1175,1001);
 INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -2173,1203 +2169,1203 @@ INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_titl
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10000, 10000, 'node/1', 'node/%','',
+          ('book-toc-1001', 10000, 10000, 'node/1', 'node/%','Home',
             'a:0:{}','book',1,
             3,10004,10002,10000,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10002, 10002, 'node/2', 'node/%','',
+          ('book-toc-1001', 10002, 10002, 'node/2', 'node/%','About AIDA',
             'a:0:{}','book',1,
             2,10004,10002,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10004, 10004, 'node/3', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10004, 10004, 'node/3', 'node/%','Program Areas',
+            'a:0:{}','book',0,
             1,10004,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10006, 10006, 'node/4', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10006, 10006, 'node/4', 'node/%','Shared Environmental Problems',
+            'a:0:{}','book',0,
             1,10006,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10008, 10008, 'node/5', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10008, 10008, 'node/5', 'node/%','The principles behind AIDA`s work',
+            'a:0:{}','book',0,
             1,10008,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10010, 10010, 'node/13', 'node/%','',
+          ('book-toc-1001', 10010, 10010, 'node/13', 'node/%','La Oroya',
             'a:0:{}','book',1,
             2,10052,10010,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10012, 10012, 'node/8', 'node/%','',
+          ('book-toc-1001', 10012, 10012, 'node/8', 'node/%','Helping',
             'a:0:{}','book',1,
             2,10136,10012,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10014, 10014, 'node/9', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10014, 10014, 'node/9', 'node/%','Contact',
+            'a:0:{}','book',0,
             1,10014,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10016, 10016, 'node/10', 'node/%','',
+          ('book-toc-1001', 10016, 10016, 'node/10', 'node/%','Donate to AIDA',
             'a:0:{}','book',1,
             2,10154,10016,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10018, 10018, 'node/11', 'node/%','',
+          ('book-toc-1001', 10018, 10018, 'node/11', 'node/%','Participating Organizations',
             'a:0:{}','book',1,
             2,10032,10018,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10020, 10020, 'node/12', 'node/%','',
+          ('book-toc-1001', 10020, 10020, 'node/12', 'node/%','Projects',
             'a:0:{}','book',1,
             3,10052,10010,10020,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10022, 10022, 'node/14', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10022, 10022, 'node/14', 'node/%','The Struggle of the U`wa',
+            'a:0:{}','book',0,
             1,10022,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10024, 10024, 'node/17', 'node/%','',
+          ('book-toc-1001', 10024, 10024, 'node/17', 'node/%','Marine Turtles',
             'a:0:{}','book',1,
             2,10102,10024,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10026, 10026, 'node/18', 'node/%','',
+          ('book-toc-1001', 10026, 10026, 'node/18', 'node/%','Oil-free Costa Rica',
             'a:0:{}','book',1,
             2,10134,10026,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10028, 10028, 'node/19', 'node/%','',
+          ('book-toc-1001', 10028, 10028, 'node/19', 'node/%','Peruvian Logging',
             'a:0:{}','book',1,
             2,10064,10028,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10030, 10030, 'node/21', 'node/%','',
+          ('book-toc-1001', 10030, 10030, 'node/21', 'node/%','Miramar',
             'a:0:{}','book',1,
             2,10050,10030,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10032, 10032, 'node/22', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10032, 10032, 'node/22', 'node/%','CEDHA',
+            'a:0:{}','book',0,
             1,10032,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10034, 10034, 'node/23', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10034, 10034, 'node/23', 'node/%','Sierra Legal Defense Fund',
+            'a:0:{}','book',0,
             1,10034,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10036, 10036, 'node/24', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10036, 10036, 'node/24', 'node/%','Fiscalía de Medio Ambiente',
+            'a:0:{}','book',0,
             1,10036,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10038, 10038, 'node/25', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10038, 10038, 'node/25', 'node/%','FUNDEPUBLICO',
+            'a:0:{}','book',0,
             1,10038,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10040, 10040, 'node/26', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10040, 10040, 'node/26', 'node/%','cedarena',
+            'a:0:{}','book',0,
             1,10040,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10042, 10042, 'node/27', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10042, 10042, 'node/27', 'node/%','Justicia Para la Naturaleza',
+            'a:0:{}','book',0,
             1,10042,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10044, 10044, 'node/28', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10044, 10044, 'node/28', 'node/%','CEMDA',
+            'a:0:{}','book',0,
             1,10044,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10046, 10046, 'node/29', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10046, 10046, 'node/29', 'node/%','Sociedad Peruana de Derecho Ambiental',
+            'a:0:{}','book',0,
             1,10046,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10048, 10048, 'node/31', 'node/%','',
+          ('book-toc-1001', 10048, 10048, 'node/31', 'node/%','Credits',
             'a:0:{}','book',1,
             2,10156,10048,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10050, 10050, 'node/47', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10050, 10050, 'node/47', 'node/%','Costa Rica Bans Open-Pit Mining',
+            'a:0:{}','book',0,
             1,10050,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10052, 10052, 'node/34', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10052, 10052, 'node/34', 'node/%','Contaminants',
+            'a:0:{}','book',0,
             1,10052,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10054, 10054, 'node/35', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10054, 10054, 'node/35', 'node/%','Health Statistics',
+            'a:0:{}','book',0,
             1,10054,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10056, 10056, 'node/37', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10056, 10056, 'node/37', 'node/%','Environmental Conditions',
+            'a:0:{}','book',0,
             1,10056,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10058, 10058, 'node/158', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10058, 10058, 'node/158', 'node/%','Economic Instruments',
+            'a:0:{}','book',0,
             1,10058,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10060, 10060, 'node/39', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10060, 10060, 'node/39', 'node/%','Proposed Actions',
+            'a:0:{}','book',0,
             1,10060,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10062, 10062, 'node/40', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10062, 10062, 'node/40', 'node/%','Doe Run, U.S.',
+            'a:0:{}','book',0,
             1,10062,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10064, 10064, 'node/41', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10064, 10064, 'node/41', 'node/%','AIDA`s Report on Illegal Logging',
+            'a:0:{}','book',0,
             1,10064,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10066, 10066, 'node/43', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10066, 10066, 'node/43', 'node/%','North American Endangered Species',
+            'a:0:{}','book',0,
             1,10066,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10068, 10068, 'node/44', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10068, 10068, 'node/44', 'node/%','Ramsar Convention',
+            'a:0:{}','book',0,
             1,10068,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10070, 10070, 'node/45', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10070, 10070, 'node/45', 'node/%','Pesticide Management',
+            'a:0:{}','book',0,
             1,10070,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10072, 10072, 'node/48', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10072, 10072, 'node/48', 'node/%','La Oroya City Measures',
+            'a:0:{}','book',0,
             1,10072,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10074, 10074, 'node/58', 'node/%','',
+          ('book-toc-1001', 10074, 10074, 'node/58', 'node/%','Photo Gallery',
             'a:0:{}','book',1,
             2,10092,10074,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10076, 10076, 'node/49', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10076, 10076, 'node/49', 'node/%','Alternative Development',
+            'a:0:{}','book',0,
             1,10076,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10078, 10078, 'node/51', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10078, 10078, 'node/51', 'node/%','Emissions Measures',
+            'a:0:{}','book',0,
             1,10078,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10080, 10080, 'node/52', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10080, 10080, 'node/52', 'node/%','Improved Regulation',
+            'a:0:{}','book',0,
             1,10080,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10082, 10082, 'node/53', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10082, 10082, 'node/53', 'node/%','La Oroya Water',
+            'a:0:{}','book',0,
             1,10082,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10084, 10084, 'node/54', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10084, 10084, 'node/54', 'node/%','Scientific Research',
+            'a:0:{}','book',0,
             1,10084,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10086, 10086, 'node/55', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10086, 10086, 'node/55', 'node/%','Public Health Actions',
+            'a:0:{}','book',0,
             1,10086,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10088, 10088, 'node/56', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10088, 10088, 'node/56', 'node/%','La Oroya Cannot Wait',
+            'a:0:{}','book',0,
             1,10088,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10090, 10090, 'node/57', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10090, 10090, 'node/57', 'node/%','Monitoring Program',
+            'a:0:{}','book',0,
             1,10090,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10092, 10092, 'node/59', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10092, 10092, 'node/59', 'node/%','City of La Oroya, Peru',
+            'a:0:{}','book',0,
             1,10092,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10094, 10094, 'node/60', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10094, 10094, 'node/60', 'node/%','Metallurgical Complex Facilities',
+            'a:0:{}','book',0,
             1,10094,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10096, 10096, 'node/61', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10096, 10096, 'node/61', 'node/%','Children in La Oroya',
+            'a:0:{}','book',0,
             1,10096,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10098, 10098, 'node/62', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10098, 10098, 'node/62', 'node/%','Solid Wastes Generated at the Smelter',
+            'a:0:{}','book',0,
             1,10098,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10100, 10100, 'node/63', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10100, 10100, 'node/63', 'node/%','River Contamination',
+            'a:0:{}','book',0,
             1,10100,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10102, 10102, 'node/64', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10102, 10102, 'node/64', 'node/%','Interconnections: Ecological Importance of Sea Turtles',
+            'a:0:{}','book',0,
             1,10102,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10104, 10104, 'node/65', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10104, 10104, 'node/65', 'node/%','International Agreements',
+            'a:0:{}','book',0,
             1,10104,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10106, 10106, 'node/66', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10106, 10106, 'node/66', 'node/%','Science',
+            'a:0:{}','book',0,
             1,10106,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10108, 10108, 'node/67', 'node/%','',
+          ('book-toc-1001', 10108, 10108, 'node/67', 'node/%','Threats to Turtles',
             'a:0:{}','book',1,
             2,10116,10108,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10110, 10110, 'node/68', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10110, 10110, 'node/68', 'node/%','X`cacel',
+            'a:0:{}','book',0,
             1,10110,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10112, 10112, 'node/69', 'node/%','',
+          ('book-toc-1001', 10112, 10112, 'node/69', 'node/%','Bycatch',
             'a:0:{}','book',1,
             2,10122,10112,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10114, 10114, 'node/70', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10114, 10114, 'node/70', 'node/%','Costa Rica',
+            'a:0:{}','book',0,
             1,10114,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10116, 10116, 'node/71', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10116, 10116, 'node/71', 'node/%','Habitat Loss',
+            'a:0:{}','book',0,
             1,10116,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10118, 10118, 'node/72', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10118, 10118, 'node/72', 'node/%','IAC',
+            'a:0:{}','book',0,
             1,10118,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10120, 10120, 'node/73', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10120, 10120, 'node/73', 'node/%','Links',
+            'a:0:{}','book',0,
             1,10120,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10122, 10122, 'node/74', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10122, 10122, 'node/74', 'node/%','Shrimp Trawling Bycatch',
+            'a:0:{}','book',0,
             1,10122,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10124, 10124, 'node/75', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10124, 10124, 'node/75', 'node/%','Longline Bycatch',
+            'a:0:{}','book',0,
             1,10124,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10126, 10126, 'node/76', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10126, 10126, 'node/76', 'node/%','Page not found',
+            'a:0:{}','book',0,
             1,10126,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10128, 10128, 'node/77', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10128, 10128, 'node/77', 'node/%','Alumysa',
+            'a:0:{}','book',0,
             1,10128,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10130, 10130, 'node/78', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10130, 10130, 'node/78', 'node/%','Past Projects',
+            'a:0:{}','book',0,
             1,10130,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10132, 10132, 'node/79', 'node/%','',
+          ('book-toc-1001', 10132, 10132, 'node/79', 'node/%','Plan Colombia',
             'a:0:{}','book',1,
             2,10138,10132,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10134, 10134, 'node/80', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10134, 10134, 'node/80', 'node/%','Press Release on Talamanca',
+            'a:0:{}','book',0,
             1,10134,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10136, 10136, 'node/81', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10136, 10136, 'node/81', 'node/%','AIDA Internships',
+            'a:0:{}','book',0,
             1,10136,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10138, 10138, 'node/82', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10138, 10138, 'node/82', 'node/%','Useful Links',
+            'a:0:{}','book',0,
             1,10138,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10140, 10140, 'node/99', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10140, 10140, 'node/99', 'node/%','Board',
+            'a:0:{}','book',0,
             1,10140,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10142, 10142, 'node/84', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10142, 10142, 'node/84', 'node/%','Eventual Impacts',
+            'a:0:{}','book',0,
             1,10142,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10144, 10144, 'node/86', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10144, 10144, 'node/86', 'node/%','Photos From Sprayed Areas',
+            'a:0:{}','book',0,
             1,10144,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10146, 10146, 'node/85', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10146, 10146, 'node/85', 'node/%','Colombian conditions ignored',
+            'a:0:{}','book',0,
             1,10146,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10148, 10148, 'node/87', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10148, 10148, 'node/87', 'node/%','Legal History',
+            'a:0:{}','book',0,
             1,10148,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10150, 10150, 'node/88', 'node/%','',
+          ('book-toc-1001', 10150, 10150, 'node/88', 'node/%','Reference Documents',
             'a:0:{}','book',1,
             2,10242,10150,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10152, 10152, 'node/89', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10152, 10152, 'node/89', 'node/%','Sprayings in National Parks',
+            'a:0:{}','book',0,
             1,10152,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10154, 10154, 'node/90', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10154, 10154, 'node/90', 'node/%','Donate Now!',
+            'a:0:{}','book',0,
             1,10154,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10156, 10156, 'node/93', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10156, 10156, 'node/93', 'node/%','Test 2',
+            'a:0:{}','book',0,
             1,10156,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10158, 10158, 'node/92', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10158, 10158, 'node/92', 'node/%','Test',
+            'a:0:{}','book',0,
             1,10158,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10160, 10160, 'node/94', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10160, 10160, 'node/94', 'node/%','Test 3',
+            'a:0:{}','book',0,
             1,10160,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10162, 10162, 'node/95', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10162, 10162, 'node/95', 'node/%','Doe Run Air Emissions',
+            'a:0:{}','book',0,
             1,10162,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10164, 10164, 'node/97', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10164, 10164, 'node/97', 'node/%','Accounting',
+            'a:0:{}','book',0,
             1,10164,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10166, 10166, 'node/98', 'node/%','',
+          ('book-toc-1001', 10166, 10166, 'node/98', 'node/%','Home',
             'a:0:{}','book',1,
             2,10140,10166,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10168, 10168, 'node/100', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10168, 10168, 'node/100', 'node/%','Contact Information',
+            'a:0:{}','book',0,
             1,10168,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10170, 10170, 'node/101', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10170, 10170, 'node/101', 'node/%','Forms',
+            'a:0:{}','book',0,
             1,10170,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10172, 10172, 'node/102', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10172, 10172, 'node/102', 'node/%','Fundraising',
+            'a:0:{}','book',0,
             1,10172,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10174, 10174, 'node/103', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10174, 10174, 'node/103', 'node/%','Minutes',
+            'a:0:{}','book',0,
             1,10174,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10176, 10176, 'node/104', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10176, 10176, 'node/104', 'node/%','New Matter Forms - Approved',
+            'a:0:{}','book',0,
             1,10176,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10178, 10178, 'node/105', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10178, 10178, 'node/105', 'node/%','Policies and Procedures',
+            'a:0:{}','book',0,
             1,10178,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10180, 10180, 'node/106', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10180, 10180, 'node/106', 'node/%','Financial Reports',
+            'a:0:{}','book',0,
             1,10180,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10182, 10182, 'node/107', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10182, 10182, 'node/107', 'node/%','Environmental and Human Health Impacts',
+            'a:0:{}','book',0,
             1,10182,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10184, 10184, 'node/108', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10184, 10184, 'node/108', 'node/%','Press Release Feb 2004',
+            'a:0:{}','book',0,
             1,10184,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10186, 10186, 'node/109', 'node/%','',
+          ('book-toc-1001', 10186, 10186, 'node/109', 'node/%','PAMA 2004 - 2011',
             'a:0:{}','book',1,
             2,10192,10186,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10188, 10188, 'node/110', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10188, 10188, 'node/110', 'node/%','Court suspension of Sprayings',
+            'a:0:{}','book',0,
             1,10188,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10190, 10190, 'node/111', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10190, 10190, 'node/111', 'node/%','Letter to State Council',
+            'a:0:{}','book',0,
             1,10190,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10192, 10192, 'node/112', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10192, 10192, 'node/112', 'node/%','AIDA Critique of the PAMA Modification Request',
+            'a:0:{}','book',0,
             1,10192,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10194, 10194, 'node/113', 'node/%','',
+          ('book-toc-1001', 10194, 10194, 'node/113', 'node/%','Ravaging the oceans',
             'a:0:{}','book',1,
             2,10058,10194,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10196, 10196, 'node/117', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10196, 10196, 'node/117', 'node/%','Atlantic Cod',
+            'a:0:{}','book',0,
             1,10196,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10198, 10198, 'node/114', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10198, 10198, 'node/114', 'node/%','AIDA Finances',
+            'a:0:{}','book',0,
             1,10198,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10200, 10200, 'node/115', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10200, 10200, 'node/115', 'node/%','Welcome',
+            'a:0:{}','book',0,
             1,10200,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10202, 10202, 'node/116', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10202, 10202, 'node/116', 'node/%','Unmet goals in 2003',
+            'a:0:{}','book',0,
             1,10202,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10204, 10204, 'node/118', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10204, 10204, 'node/118', 'node/%','The Chilean Sea Bass',
+            'a:0:{}','book',0,
             1,10204,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10206, 10206, 'node/119', 'node/%','',
+          ('book-toc-1001', 10206, 10206, 'node/119', 'node/%','Economic and Ecological Effects',
             'a:0:{}','book',1,
             2,10196,10206,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10208, 10208, 'node/120', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10208, 10208, 'node/120', 'node/%','The Nassau Grouper',
+            'a:0:{}','book',0,
             1,10208,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10210, 10210, 'node/121', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10210, 10210, 'node/121', 'node/%','The Tragedy of the Commons',
+            'a:0:{}','book',0,
             1,10210,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10212, 10212, 'node/122', 'node/%','',
+          ('book-toc-1001', 10212, 10212, 'node/122', 'node/%','Modern Fishing Techniques',
             'a:0:{}','book',1,
             2,10214,10212,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10214, 10214, 'node/123', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10214, 10214, 'node/123', 'node/%','Factory Trawlers',
+            'a:0:{}','book',0,
             1,10214,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10216, 10216, 'node/124', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10216, 10216, 'node/124', 'node/%','Longliners',
+            'a:0:{}','book',0,
             1,10216,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10218, 10218, 'node/125', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10218, 10218, 'node/125', 'node/%','International Law',
+            'a:0:{}','book',0,
             1,10218,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10220, 10220, 'node/156', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10220, 10220, 'node/156', 'node/%','Implementation of Peruvian Air Quality Law in the La Oroya Region',
+            'a:0:{}','book',0,
             1,10220,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10222, 10222, 'node/126', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10222, 10222, 'node/126', 'node/%','Conditions not met in 2003',
+            'a:0:{}','book',0,
             1,10222,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10224, 10224, 'node/127', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10224, 10224, 'node/127', 'node/%','AIDA Annual Report',
+            'a:0:{}','book',0,
             1,10224,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10226, 10226, 'node/128', 'node/%','',
+          ('book-toc-1001', 10226, 10226, 'node/128', 'node/%','Human Rights and the Environment',
             'a:0:{}','book',1,
             2,10326,10226,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10228, 10228, 'node/129', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10228, 10228, 'node/129', 'node/%','Leatherback National Marine Park',
+            'a:0:{}','book',0,
             1,10228,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10230, 10230, 'node/130', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10230, 10230, 'node/130', 'node/%','Press Release April 05',
+            'a:0:{}','book',0,
             1,10230,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10232, 10232, 'node/131', 'node/%','',
+          ('book-toc-1001', 10232, 10232, 'node/131', 'node/%','Reference Documents',
             'a:0:{}','book',1,
             2,10252,10232,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10234, 10234, 'node/132', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10234, 10234, 'node/132', 'node/%','Press Releases',
+            'a:0:{}','book',0,
             1,10234,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10236, 10236, 'node/133', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10236, 10236, 'node/133', 'node/%','AIDA Critique of CICAD Study',
+            'a:0:{}','book',0,
             1,10236,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10238, 10238, 'node/134', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10238, 10238, 'node/134', 'node/%','CICAD Interim Report & US Department of State Report to US Congress',
+            'a:0:{}','book',0,
             1,10238,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10240, 10240, 'node/135', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10240, 10240, 'node/135', 'node/%','Spraying in National Parks',
+            'a:0:{}','book',0,
             1,10240,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10242, 10242, 'node/146', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10242, 10242, 'node/146', 'node/%','Government Documents',
+            'a:0:{}','book',0,
             1,10242,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10244, 10244, 'node/136', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10244, 10244, 'node/136', 'node/%','Jop opening',
+            'a:0:{}','book',0,
             1,10244,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10246, 10246, 'node/137', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10246, 10246, 'node/137', 'node/%','What is Plan Colombia?',
+            'a:0:{}','book',0,
             1,10246,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10248, 10248, 'node/138', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10248, 10248, 'node/138', 'node/%','AIDA T-Shirts',
+            'a:0:{}','book',0,
             1,10248,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10250, 10250, 'node/139', 'node/%','',
+          ('book-toc-1001', 10250, 10250, 'node/139', 'node/%','Internship and Job Opportunities',
             'a:0:{}','book',1,
             2,10338,10250,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10252, 10252, 'node/140', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10252, 10252, 'node/140', 'node/%','Studies on Impacts to Health',
+            'a:0:{}','book',0,
             1,10252,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10254, 10254, 'node/152', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10254, 10254, 'node/152', 'node/%','Doe Run, Peru Requests PAMA Extensions 2005',
+            'a:0:{}','book',0,
             1,10254,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10256, 10256, 'node/142', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10256, 10256, 'node/142', 'node/%','Studies on Environmental Quality',
+            'a:0:{}','book',0,
             1,10256,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10258, 10258, 'node/143', 'node/%','',
+          ('book-toc-1001', 10258, 10258, 'node/143', 'node/%','Obligations for Environmental Remediation',
             'a:0:{}','book',1,
             2,10220,10258,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10260, 10260, 'node/144', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10260, 10260, 'node/144', 'node/%','Economic Issues',
+            'a:0:{}','book',0,
             1,10260,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10262, 10262, 'node/145', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10262, 10262, 'node/145', 'node/%','Court Decisions and Cases',
+            'a:0:{}','book',0,
             1,10262,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10264, 10264, 'node/147', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10264, 10264, 'node/147', 'node/%','Press Releases for Plan Colombia',
+            'a:0:{}','book',0,
             1,10264,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10266, 10266, 'node/148', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10266, 10266, 'node/148', 'node/%','Inter-American Commission on Human Rights',
+            'a:0:{}','book',0,
             1,10266,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10268, 10268, 'node/149', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10268, 10268, 'node/149', 'node/%','Human Rights and Environment Workshop',
+            'a:0:{}','book',0,
             1,10268,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10270, 10270, 'node/151', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10270, 10270, 'node/151', 'node/%','andy is cool',
+            'a:0:{}','book',0,
             1,10270,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10272, 10272, 'node/153', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10272, 10272, 'node/153', 'node/%','Legal Violations and Court Cases',
+            'a:0:{}','book',0,
             1,10272,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10274, 10274, 'node/154', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10274, 10274, 'node/154', 'node/%','Regional and International Opposition',
+            'a:0:{}','book',0,
             1,10274,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10276, 10276, 'node/155', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10276, 10276, 'node/155', 'node/%','Effectiveness and Alternatives',
+            'a:0:{}','book',0,
             1,10276,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10278, 10278, 'node/157', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10278, 10278, 'node/157', 'node/%','Legal Victory June 2006',
+            'a:0:{}','book',0,
             1,10278,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10280, 10280, 'node/159', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10280, 10280, 'node/159', 'node/%','Green Taxes',
+            'a:0:{}','book',0,
             1,10280,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10282, 10282, 'node/160', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10282, 10282, 'node/160', 'node/%','Embargo',
+            'a:0:{}','book',0,
             1,10282,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10284, 10284, 'node/161', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10284, 10284, 'node/161', 'node/%','Certification and Eco-labeling',
+            'a:0:{}','book',0,
             1,10284,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10286, 10286, 'node/162', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10286, 10286, 'node/162', 'node/%','AIDA Urges for Alternative Development Programs in Colombia',
+            'a:0:{}','book',0,
             1,10286,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10288, 10288, 'node/163', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10288, 10288, 'node/163', 'node/%','Chronological Summaries',
+            'a:0:{}','book',0,
             1,10288,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10290, 10290, 'node/164', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10290, 10290, 'node/164', 'node/%','DRP ISO 14001 Certification',
+            'a:0:{}','book',0,
             1,10290,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10292, 10292, 'node/165', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10292, 10292, 'node/165', 'node/%','Information related to DRP compliance with 2006 PAMA',
+            'a:0:{}','book',0,
             1,10292,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10294, 10294, 'node/168', 'node/%','',
+          ('book-toc-1001', 10294, 10294, 'node/168', 'node/%','AIDA News',
             'a:0:{}','book',1,
             2,10300,10294,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10296, 10296, 'node/166', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10296, 10296, 'node/166', 'node/%','Subscribe',
+            'a:0:{}','book',0,
             1,10296,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10298, 10298, 'node/167', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10298, 10298, 'node/167', 'node/%','AIDA critical of Colombian spraying in Ecuadorian border region',
+            'a:0:{}','book',0,
             1,10298,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10300, 10300, 'node/169', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10300, 10300, 'node/169', 'node/%','AIDA Monthly Updates',
+            'a:0:{}','book',0,
             1,10300,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10302, 10302, 'node/170', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10302, 10302, 'node/170', 'node/%','Marine Protection Press Releases',
+            'a:0:{}','book',0,
             1,10302,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10304, 10304, 'node/171', 'node/%','',
+          ('book-toc-1001', 10304, 10304, 'node/171', 'node/%','Toward Sustainable Aquaculture',
             'a:0:{}','book',1,
             2,10314,10304,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10306, 10306, 'node/172', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10306, 10306, 'node/172', 'node/%','Aquaculture Reference Documents',
+            'a:0:{}','book',0,
             1,10306,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10308, 10308, 'node/173', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10308, 10308, 'node/173', 'node/%','Useful Links!',
+            'a:0:{}','book',0,
             1,10308,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10310, 10310, 'node/174', 'node/%','',
+          ('book-toc-1001', 10310, 10310, 'node/174', 'node/%','Hydroelectric Dam, La Parota',
             'a:0:{}','book',1,
             2,10320,10310,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10312, 10312, 'node/175', 'node/%','',
+          ('book-toc-1001', 10312, 10312, 'node/175', 'node/%','Environmental Impacts and Human Rights Violations Resulting from Large Dams',
             'a:0:{}','book',1,
             2,10332,10312,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10314, 10314, 'node/176', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10314, 10314, 'node/176', 'node/%','Aquaculture Impacts in the Mediterranean',
+            'a:0:{}','book',0,
             1,10314,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10316, 10316, 'node/177', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10316, 10316, 'node/177', 'node/%','Donate through CFC',
+            'a:0:{}','book',0,
             1,10316,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10318, 10318, 'node/178', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10318, 10318, 'node/178', 'node/%','Peruvian Congress',
+            'a:0:{}','book',0,
             1,10318,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10320, 10320, 'node/179', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10320, 10320, 'node/179', 'node/%','La Parota Suspension 2007',
+            'a:0:{}','book',0,
             1,10320,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10322, 10322, 'node/180', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10322, 10322, 'node/180', 'node/%','Anti-drug policy shifts in the right direction!',
+            'a:0:{}','book',0,
             1,10322,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10324, 10324, 'node/181', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10324, 10324, 'node/181', 'node/%','Bellavista in Miramar, Press Releases',
+            'a:0:{}','book',0,
             1,10324,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10326, 10326, 'node/182', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10326, 10326, 'node/182', 'node/%','AIDA Guide to Envrionmental Defense',
+            'a:0:{}','book',0,
             1,10326,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10328, 10328, 'node/183', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10328, 10328, 'node/183', 'node/%','Colombian Court upholds Tribal Peoples’ Right',
+            'a:0:{}','book',0,
             1,10328,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10330, 10330, 'node/184', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10330, 10330, 'node/184', 'node/%','Amicus Curiae',
+            'a:0:{}','book',0,
             1,10330,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10332, 10332, 'node/185', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10332, 10332, 'node/185', 'node/%','Hydroelectric Project  Baba',
+            'a:0:{}','book',0,
             1,10332,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10334, 10334, 'node/186', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10334, 10334, 'node/186', 'node/%','Mexico Exotic Species',
+            'a:0:{}','book',0,
             1,10334,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10336, 10336, 'node/187', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10336, 10336, 'node/187', 'node/%','Crucitas Mining Project',
+            'a:0:{}','book',0,
             1,10336,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10338, 10338, 'node/188', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10338, 10338, 'node/188', 'node/%','Communications internship/volunteer opportunity',
+            'a:0:{}','book',0,
             1,10338,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10340, 10340, 'node/189', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10340, 10340, 'node/189', 'node/%','AIDA is looking for lawyer in Mexico',
+            'a:0:{}','book',0,
             1,10340,0,0,0,0);
 INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', 10342, 10342, 'node/190', 'node/%','',
-            'a:0:{}','system',0,
+          ('book-toc-1001', 10342, 10342, 'node/190', 'node/%','La Oroya Subscribe',
+            'a:0:{}','book',0,
             1,10342,0,0,0,0);

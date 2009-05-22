@@ -161,15 +161,15 @@ INSERT INTO `menu_links` (`menu_name`, `mlid`, `plid`, `link_path`, `router_path
 ('navigation', 160, 15, 'admin/help/i18nmenu', 'admin/help/i18nmenu', 'i18nmenu', 'a:0:{}', 'system', -1, 0, 0, 0, 0, 3, 0, 2, 15, 160, 0, 0, 0, 0, 0, 0, 0),
 ('navigation', 158, 15, 'admin/help/i18nstrings', 'admin/help/i18nstrings', 'i18nstrings', 'a:0:{}', 'system', -1, 0, 0, 0, 0, 3, 0, 2, 15, 158, 0, 0, 0, 0, 0, 0, 0),
 ('navigation', 159, 15, 'admin/help/i18nblocks', 'admin/help/i18nblocks', 'i18nblocks', 'a:0:{}', 'system', -1, 0, 0, 0, 0, 3, 0, 2, 15, 159, 0, 0, 0, 0, 0, 0, 0),
-('primary-links', 153, 0, 'node/1001', 'node/%', 'Inicio', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:6:"Inicio";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 153, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('primary-links', 154, 0, 'node/1', 'node/%', 'Home', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:4:"Home";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 154, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('primary-links', 155, 0, 'node/1078', 'node/%', 'Proyectos Pasados', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:17:"Proyectos Pasados";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 155, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('primary-links', 156, 0, 'node/78', 'node/%', 'Past Projects', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:13:"Past Projects";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 ('navigation', 157, 0, 'i18nstrings/save', 'i18nstrings/save', 'Save string', 'a:0:{}', 'system', -1, 0, 0, 0, 0, 1, 0, 157, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     SQL
+#('primary-links', 153, 0, 'node/1001', 'node/%', 'Inicio', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:6:"Inicio";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 153, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+#('primary-links', 154, 0, 'node/1', 'node/%', 'Home', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:4:"Home";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 154, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+#('primary-links', 155, 0, 'node/1078', 'node/%', 'Proyectos Pasados', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:17:"Proyectos Pasados";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 155, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+#('primary-links', 156, 0, 'node/78', 'node/%', 'Past Projects', 'a:1:{s:10:"attributes";a:1:{s:5:"title";s:13:"Past Projects";}}', 'menu', 0, 0, 0, 0, 0, 1, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     mlids = {}
     mlid = 10000
-    Page.find(:all).each do |page|
+    Page.all.each do |page|
       en_id = page.id
       es_id = en_id + 1000;
 
@@ -177,16 +177,13 @@ INSERT INTO `menu_links` (`menu_name`, `mlid`, `plid`, `link_path`, `router_path
       mlids[es_id] = mlid + 1
       mlid += 2
 
-      node_type = page.parent ? 'page' : 'book'
+      node_type = page.parent ? 'book' : 'book'
       puts "INSERT INTO node
             (nid,            vid,            type,  language,title,             uid, status, created, changed, comment, promote, moderate, sticky, tnid, translate) VALUES
             (#{en_id},     #{en_id},     '#{node_type}','en',    '#{page.title_en.escape_single_quotes}',1,   1,      NOW(),   NOW(), 0,0,0,0,#{en_id},0),
             (#{es_id},#{es_id},'#{node_type}','es',    '#{page.title_es.escape_single_quotes}',1,   1,      NOW(),   NOW(), 0,0,0,0,#{en_id},0);"
 
-      #if page.parent.nil?
       puts "INSERT INTO book (mlid, nid, bid) VALUES (#{mlids[en_id]},#{en_id},1),(#{mlids[es_id]},#{es_id},1001);"
-      #end
-
 
       puts "INSERT INTO node_revisions
               (nid,       vid,       uid, title,              body,             teaser,          log, timestamp,format) VALUES
@@ -197,21 +194,21 @@ INSERT INTO `menu_links` (`menu_name`, `mlid`, `plid`, `link_path`, `router_path
       puts "INSERT INTO url_alias (src, dst, language) VALUES ('node/#{es_id}','#{page.name}','es');"
     end
 
-    Page.find(:all).each do |page|
-      hids = page.hier.map &:id
-      hmlids = hids.map {|hid| mlids[hid]}
-      p1 = hmlids[0] || 0
-      p2 = hmlids[1] || 0
-      p3 = hmlids[2] || 0
-      p4 = hmlids[3] || 0
-      p5 = hmlids[4] || 0
+    Page.all.each do |page|
+      hier_mdlids = page.hier.map(&:id).map {|hid| mlids[hid]}
+      p1 = hier_mdlids[0] || 0
+      p2 = hier_mdlids[1] || 0
+      p3 = hier_mdlids[2] || 0
+      p4 = hier_mdlids[3] || 0
+      p5 = hier_mdlids[4] || 0
       has_children = page.children.empty? ? 0 : 1
       mod = page.parent ? 'book' : 'system'
+      mod = 'book'
       puts "INSERT INTO menu_links (menu_name, mlid, plid, link_path, router_path, link_title,
                                     options, module, has_children,
                                     depth, p1, p2, p3, p4, p5)
           VALUES
-          ('book-toc-1001', #{mlids[page.id]}, #{hmlids[-1] || 0}, 'node/#{page.id}', 'node/%','',
+          ('book-toc-1001', #{mlids[page.id]}, #{hier_mdlids[-1] || 0}, 'node/#{page.id}', 'node/%','#{page.title_en.escape_single_quotes}',
             'a:0:{}','#{mod}',#{has_children},
             #{page.depth},#{p1},#{p2},#{p3},#{p4},#{p5});"
 
