@@ -6,7 +6,8 @@ development:
   timeout: 5000
   username: root
   password:
-  encoding: latin1
+  encoding: utf8
+#  encoding: latin1
   
 
 # Warning: The database defined as "test" will be erased and

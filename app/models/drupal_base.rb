@@ -1,12 +1,15 @@
-class DrupalBase < ActiveRecord::Base
+module DrupalBase
 
-  self.establish_connection(
-      :adapter  => "mysql",
-      :host     => "localhost",
-      :username => "root",
-      :password => "",
-      :database => "aida_drupal",
-      :encoding => "utf8"
+  def self.included(base)
+
+    base.establish_connection(
+        :adapter  => "mysql",
+            :host     => "localhost",
+            :username => "root",
+            :password => "",
+            :database => "aida_drupal",
+            :encoding => "utf8"
     )
+  end
 
 end

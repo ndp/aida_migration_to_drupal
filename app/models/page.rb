@@ -13,6 +13,24 @@ class Page < ActiveRecord::Base
   has_one :parent, :foreign_key=>'parent_page_id', :class_name=>'Page'
   has_many :children, :foreign_key=>'parent_page_id', :class_name=>'Page'
 
+  def node_id_en
+    en_id = self.id
+  end
+
+  def node_id_es
+    self.id + 1000;
+  end
+
+  def node_id(lang)
+    self.send("node_id_#{lang}".to_sym)
+  end
+
+
+  def title(lang)
+    self.send("title_#{lang}".to_sym)
+  end
+
+
   def story_count
     content_template ? content_template.stories : 0
   end
@@ -29,6 +47,10 @@ class Page < ActiveRecord::Base
   def text_es
     return '' unless story_count && story && story.story_texts.count
     Story.relink story.story_texts.spanish[0].text
+  end
+
+  def text(lang)
+    self.send("text_#{lang}".to_sym)
   end
 
   def depth
