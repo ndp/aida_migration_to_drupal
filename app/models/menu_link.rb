@@ -20,7 +20,7 @@ class MenuLink <  ActiveRecord::Base
     options = 'a:3:{s:10:"attributes";a:1:{s:5:"title";s:'+ title.length.to_s+':"'+title+'";}s:5:"alter";b:1;s:8:"langcode";s:2:"'+node.language+'";}'
 
     super(opts.merge(
-        :link_path=>node.link_path,
+        :link_path=>node.link_path(true),
             :router_path=>node.router_path,
             :link_title=>title,
             :options=>options,
@@ -33,7 +33,9 @@ class MenuLink <  ActiveRecord::Base
             :p4 => (parent_menu ? parent_menu.p4 : 0),
             :p5 => (parent_menu ? parent_menu.p5 : 0),
             :p6 => (parent_menu ? parent_menu.p6 : 0),
-            :p7 => (parent_menu ? parent_menu.p7 : 0), :updated=>1
+            :p7 => (parent_menu ? parent_menu.p7 : 0),
+            :p8 => (parent_menu ? parent_menu.p8 : 0),
+            :p9 => (parent_menu ? parent_menu.p9 : 0), :updated=>1
     ))
 #+-----------------+------+------+-----------+-------------+--------------------------------+-------------------------------------------------------------------------------------------+--------+--------+----------+--------------+----------+--------+-------+------------+-----+-----+----+----+----+----+----+----+----+---------+
     #| menu_name       | mlid | plid | link_path | router_path | link_title                     | options                                                                                   | module | hidden | external | has_children | expanded | weight | depth | customized | p1  | p2  | p3 | p4 | p5 | p6 | p7 | p8 | p9 | updated |

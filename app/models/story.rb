@@ -18,8 +18,13 @@ class Story < ActiveRecord::Base
       s.gsub! '{PAGE ', ''
       s.gsub! '}', ''
       n,label = s.split(' ', 2)
-      "<a href=\"/?q=#{n}\">#{label}</a>"
-    end
+      "<a href=\"?q=#{n}\">#{label}</a>"
+    end.gsub(/\{DOC [^}]*\}/) do |s|  # {DOC GRANJAS_MINAE_DTO_DE_AGUAS.pdf Escrito ante Sala Constitucional de Costa Rica (15 de noviembre de 2006)}
+      s.gsub! '{DOC ', ''
+      s.gsub! '}', ''
+      n,label = s.split(' ', 2)
+      "<a href=\"/templates/aida/uploads/docs/#{n}\">#{label}</a>"
+    end.gsub(/\/templates\/aida\/uploads\/docs/,'sites/default/files/').gsub(/<\/p>\s*<p>/,"\n\n").gsub(/^<p>/,'').gsub(/<\/p>$/,'');
   end
 
 end

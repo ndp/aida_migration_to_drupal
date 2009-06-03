@@ -11,8 +11,11 @@ class Node < ActiveRecord::Base
 
   has_many :node_revisions, :foreign_key=>'nid', :primary_key=>:nid
 
-  def link_path
-    "node/#{self.nid}"
+  def link_path(raw = false)
+    lp = "node/#{self.nid}"
+    return lp if raw
+    a = UrlAlias.find(:first, :conditions=>{:src=>lp})
+    a ? a.dst : lp
   end
 
   def router_path
