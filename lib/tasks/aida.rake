@@ -237,38 +237,43 @@ INSERT INTO `menu_links` (`menu_name`, `mlid`, `plid`, `link_path`, `router_path
   end
 
 
-  #| pid | src       | dst           | language |
-  #+-----+-----------+---------------+----------+
-  #|   1 | node/1001 | home          | es       |
-  #|   2 | node/1    | home          | en       |
-  #|   3 | node/1078 | past_projects | es       |
-  #|   4 | node/78   | past_projects | en       |
+  PRIMARY_LINKS = ['subscribe','contact','about']
 
   desc 'Export page text'
   task :transfer=> :clear_drupal do
 
-    Page.find(:all, :conditions=>{:parent_page_id=>0}).each do |page|
-      node = create_drupal_page(page, 'en')
-      n = create_drupal_page(page, 'es')
-    end
+    Page.find(:all, :conditions=>{:parent_page_id=>0}).each { |p| process_page(p)}
 
-    Page.find_in_batches(:conditions=>['parent_page_id!=0']) do |page_group|
-      page_group.each do |page|
-        create_drupal_page(page, 'en')
-        create_drupal_page(page, 'es')
-      end
-    end
-
-    Page.find(:all, :conditions=>{:parent_page_id=>0}).each do |page|
-      create_menu(page, 'secondary-links', 'en')
-      create_menu(page, 'secondary-links', 'es')
+    Page.find(:all, :conditions=>{:name=>['home',PRIMARY_LINKS].flatten}).each do |page|
+      m = (PRIMARY_LINKS.include?(page.name)) ? 'primary-links':'secondary-links'
+      create_menu(page, m, 'en')
+      create_menu(page, m, 'es')
     end
 
   end
 
+  def process_page(page)
+    return unless include_page? page
+    node = create_drupal_page(page, 'en')
+    n = create_drupal_page(page, 'es')
+    page.children.each do |ch|
+      process_page(ch)
+    end
+  end
+
+  def include_page?(p)
+    !['testing', 'credits.test', 'credits.test2', 'credits.test3', 'welcome_page','internal_home','error',
+        'cedha','cedma','fundepublico','fima','jpn','sieralega','spda','cedarena'].include? p.name
+  end
+
   def create_menu(page, menu_name, lang, parent_menu = nil)
+    menu_name = 'primary-links' if PRIMARY_LINKS.include?(page.name)
     nid = page.node_id(lang)
-    node = Node.find(nid)
+    begin
+      node = Node.find(nid)
+    rescue
+      return
+    end
     title = node.title
     title = "Node #{nid}" if title.blank?
     ml = MenuLink.new(parent_menu, node,
@@ -279,8 +284,10 @@ INSERT INTO `menu_links` (`menu_name`, `mlid`, `plid`, `link_path`, `router_path
     ml.update_attribute("p#{ml.depth}", ml.mlid)
     ml.save!
 
-    page.children.each do |child_page|
-      create_menu(child_page, menu_name, lang, ml)
+    if ml.depth < 4
+      page.children.each do |child_page|
+        create_menu(child_page, menu_name, lang, ml)
+      end
     end
 
     #+-----------------+------+------+-----------+-------------+--------------------------------+-------------------------------------------------------------------------------------------+--------+--------+----------+--------------+----------+--------+-------+------------+-----+-----+----+----+----+----+----+----+----+---------+

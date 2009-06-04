@@ -24,7 +24,7 @@ class Story < ActiveRecord::Base
       s.gsub! '}', ''
       n,label = s.split(' ', 2)
       "<a href=\"/templates/aida/uploads/docs/#{n}\">#{label}</a>"
-    end.gsub(/\/templates\/aida\/uploads\/docs/,'sites/default/files/').gsub(/<\/p>\s*<p>/,"\n\n").gsub(/^<p>/,'').gsub(/<\/p>$/,'');
+    end.gsub(/<\/p>\s*<p>/,"\n\n").gsub(/^<p>/,'').gsub(/<\/p>$/,''); #gsub(/\/templates\/aida\/uploads\/docs/,'sites/default/files/')
   end
 
 end
