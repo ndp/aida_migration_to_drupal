@@ -35,7 +35,7 @@ class MenuLink <  ActiveRecord::Base
             :p6 => (parent_menu ? parent_menu.p6 : 0),
             :p7 => (parent_menu ? parent_menu.p7 : 0),
             :p8 => (parent_menu ? parent_menu.p8 : 0),
-            :p9 => (parent_menu ? parent_menu.p9 : 0), :updated=>1,:expanded=>(parent_menu ? 1 : 0)
+            :p9 => (parent_menu ? parent_menu.p9 : 0), :updated=>1,:expanded=>(parent_menu ? 0 : 1)
     ))
 #+-----------------+------+------+-----------+-------------+--------------------------------+-------------------------------------------------------------------------------------------+--------+--------+----------+--------------+----------+--------+-------+------------+-----+-----+----+----+----+----+----+----+----+---------+
     #| menu_name       | mlid | plid | link_path | router_path | link_title                     | options                                                                                   | module | hidden | external | has_children | expanded | weight | depth | customized | p1  | p2  | p3 | p4 | p5 | p6 | p7 | p8 | p9 | updated |

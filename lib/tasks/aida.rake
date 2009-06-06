@@ -263,7 +263,7 @@ INSERT INTO `menu_links` (`menu_name`, `mlid`, `plid`, `link_path`, `router_path
 
   def include_page?(p)
     !['testing', 'credits.test', 'credits.test2', 'credits.test3', 'welcome_page','internal_home','error',
-        'cedha','cedma','fundepublico','fima','jpn','sieralega','spda','cedarena'].include? p.name
+        'cedha','cemda','fundepublico','fima','jpn','sierralega','spda','cedarena'].include? p.name
   end
 
   def create_menu(page, menu_name, lang, parent_menu = nil)
@@ -284,7 +284,7 @@ INSERT INTO `menu_links` (`menu_name`, `mlid`, `plid`, `link_path`, `router_path
     ml.update_attribute("p#{ml.depth}", ml.mlid)
     ml.save!
 
-    if ml.depth < 4
+    if ml.depth < 3
       page.children.each do |child_page|
         create_menu(child_page, menu_name, lang, ml)
       end

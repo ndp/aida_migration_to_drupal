@@ -8,10 +8,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/aida.rake" afterPath="$PROJECT_DIR$/lib/tasks/aida.rake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/menu_link.rb" afterPath="$PROJECT_DIR$/app/models/menu_link.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/story.rb" afterPath="$PROJECT_DIR$/app/models/story.rb" />
     </list>
-    <ignored path="aida.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="aida.iws" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
@@ -29,7 +28,7 @@
       <file leaf-file-name="aida.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/aida.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="265" column="80" selection-start="35047" selection-end="35047" vertical-scroll-proportion="0.3207127">
+            <state line="295" column="182" selection-start="36802" selection-end="36886" vertical-scroll-proportion="0.5224719">
               <folding />
             </state>
           </provider>
@@ -438,12 +437,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1436" height="878" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952926" sideWeight="0.5" order="7" side_tool="false" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33907285" sideWeight="0.5" order="2" side_tool="false" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33907285" sideWeight="0.5" order="2" side_tool="false" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16784702" sideWeight="0.6516556" order="0" side_tool="false" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32642487" sideWeight="0.5" order="3" side_tool="false" />
@@ -639,6 +638,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/menu_link.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="98" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/url_alias.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
@@ -653,16 +659,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/menu_link.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="98" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/aida.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="265" column="80" selection-start="35047" selection-end="35047" vertical-scroll-proportion="0.3207127">
+        <state line="295" column="182" selection-start="36802" selection-end="36886" vertical-scroll-proportion="0.5224719">
           <folding />
         </state>
       </provider>
